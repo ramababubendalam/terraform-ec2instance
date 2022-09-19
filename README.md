@@ -2,13 +2,18 @@
 Create amazon-linux-2 ec2 instance using terraform and deploy minikube kubernetes cluster using docker as containerd
 
 # Pre-requests
-1.Create ssh pem key from aws console(region which you want to create ec2 instance) and download the key to your local mahine where terraform commands are run.
+1.Create ssh pem key from aws console(region which you want to create ec2 instance) and download the key to your local mahine where terraform commands
+are run.
+
 2.Install terraform >= 0.13.1.
+
 3.Configure aws key secret.
 
 # configuration variables
 1.Under main.tf update  key_name to your ssh key name created in pre-requests step.
+
 2.Under main.tf update ssh_key_file_location to your key location which is downloaded under pre-requests step.
+
 3.Under main.tf/locals update region to the your desired region to create ec2-instance. If this is not change instance will be created in ireland region.
 
 # Running terraform scripts
